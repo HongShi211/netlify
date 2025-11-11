@@ -1,0 +1,16 @@
+[build]
+  command = ""
+  publish = "public"
+
+# Map /dns-query and /ip-info and root routes to the edge function
+[[edge_functions]]
+  function = "doh"
+  path = "/dns-query"
+
+[[edge_functions]]
+  function = "doh"
+  path = "/ip-info"
+
+[[edge_functions]]
+  function = "doh"
+  path = "/"
